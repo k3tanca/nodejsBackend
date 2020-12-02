@@ -19,7 +19,7 @@ mongoose.connection.on("error", (err) => {
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Welcome");
+  res.send(process.env.MONGOURI);
 });
 
 app.listen(PORT, () => {
